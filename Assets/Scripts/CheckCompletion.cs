@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class CheckCompletion : MonoBehaviour
 {
-    public List<PuzzleCube> CubeList;
+    private List<PuzzleCube> CubeList;
+
+    public GameObject correctScreen;
+    public GameObject incorrectScreen;
+
+    private enum CorrectState { None, Correct, Incorrect  };
+    private CorrectState correctState;
 
     private void Start()
     {
-        CubeList.AddRange(FindObjectsOfType<PuzzleCube>());
+        correctState = CorrectState.None;
+        CubeList = new List<PuzzleCube>(FindObjectsOfType<PuzzleCube>());
     }
 
     public void CheckForCompletion()
@@ -26,21 +33,37 @@ public class CheckCompletion : MonoBehaviour
 
         if (correctCubes == totalCubes)
         {
+            if (correctState == CorrectState.Correct)
+                return;
+
+            correctState = CorrectState.Correct;
+
             VictoryScreen();
         }
         else
         {
+            if (correctState == CorrectState.Incorrect)
+                return;
+
+            correctState = CorrectState.Incorrect;
+
             IncorrectScreen();
         }
     }
 
     private void VictoryScreen()
-    {
+    {   
+        if (incorrectScreen.activeSelf)
+            incorrectScreen.SetActive(false);
 
+        correctScreen.SetActive(true);
     }
 
     private void IncorrectScreen()
     {
+        if (correctScreen.activeSelf)
+            correctScreen.SetActive(false);
 
+        incorrectScreen.SetActive(true);
     }
 }

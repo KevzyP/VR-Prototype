@@ -7,7 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 public class PuzzlePedestal : MonoBehaviour
 {
     public ColorStates pedestalColor;
-    public XRSocketInteractor socketInteractor;
+    private XRSocketInteractor socketInteractor;
 
     private void Start()
     {

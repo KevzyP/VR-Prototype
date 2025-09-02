@@ -6,6 +6,6 @@ public class PuzzleCube : MonoBehaviour
 {
     public ColorStates cubeColor;
 
-    public bool IsCorrectColor = false;
+    public bool IsCorrectColor { get; set;}
 
 }
