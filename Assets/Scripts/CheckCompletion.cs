@@ -5,9 +5,12 @@ using UnityEngine;
 public class CheckCompletion : MonoBehaviour
 {
     private List<PuzzleCube> CubeList;
+    private AudioSource audioSource;
 
     public GameObject correctScreen;
     public GameObject incorrectScreen;
+    public AudioClip correctAudio;
+    public AudioClip incorrectAudio;
 
     private enum CorrectState { None, Correct, Incorrect  };
     private CorrectState correctState;
@@ -16,6 +19,7 @@ public class CheckCompletion : MonoBehaviour
     {
         correctState = CorrectState.None;
         CubeList = new List<PuzzleCube>(FindObjectsOfType<PuzzleCube>());
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void CheckForCompletion()
@@ -57,6 +61,9 @@ public class CheckCompletion : MonoBehaviour
             incorrectScreen.SetActive(false);
 
         correctScreen.SetActive(true);
+
+        audioSource.clip = correctAudio;
+        audioSource.Play();
     }
 
     private void IncorrectScreen()
@@ -65,5 +72,8 @@ public class CheckCompletion : MonoBehaviour
             correctScreen.SetActive(false);
 
         incorrectScreen.SetActive(true);
+
+        audioSource.clip = incorrectAudio;
+        audioSource.Play();
     }
 }
