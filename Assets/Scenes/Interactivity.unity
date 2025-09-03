@@ -446,6 +446,10 @@ PrefabInstance:
       propertyPath: color
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3702461926772687387, guid: 124cdb2574c29b5438136dfd9833b24e, type: 3}
+      propertyPath: cubeColor
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6065561719073189681, guid: 124cdb2574c29b5438136dfd9833b24e, type: 3}
       propertyPath: m_Name
       value: Blue Cube
@@ -581,6 +585,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1034360125917439371, guid: 113f7d758c585b84cbfbbd477df20dff, type: 3}
       propertyPath: color
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034360125917439371, guid: 113f7d758c585b84cbfbbd477df20dff, type: 3}
+      propertyPath: pedestalColor
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2771210008679531434, guid: 113f7d758c585b84cbfbbd477df20dff, type: 3}
@@ -834,8 +842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 993b0fd5d76e2eb42b41ea2e6037a035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctScreen: {fileID: 0}
-  incorrectScreen: {fileID: 0}
+  correctScreen: {fileID: 1825777555}
+  incorrectScreen: {fileID: 623392623}
 --- !u!1 &623392623
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,6 +970,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1034360125917439371, guid: 113f7d758c585b84cbfbbd477df20dff, type: 3}
       propertyPath: color
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034360125917439371, guid: 113f7d758c585b84cbfbbd477df20dff, type: 3}
+      propertyPath: pedestalColor
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2771210008679531434, guid: 113f7d758c585b84cbfbbd477df20dff, type: 3}
@@ -1708,8 +1720,43 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2249296449437080463, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_FarAttachMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249296449437080463, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_EnableFarCasting
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660198778512262357, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660198778512262357, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_RayOriginTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533061935663027309, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_AimTargetObject
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090404306924700944, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_FarAttachMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090404306924700944, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_EnableFarCasting
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 366349416840011968, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+    - {fileID: 3186680927890312076, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+    - {fileID: 5197713149705359707, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+    - {fileID: 2553924678193010974, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+    - {fileID: 2660198778512262361, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+    - {fileID: 369829410870875383, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+    - {fileID: 5306750102549658663, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
@@ -2063,6 +2110,10 @@ PrefabInstance:
       propertyPath: color
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3702461926772687387, guid: 124cdb2574c29b5438136dfd9833b24e, type: 3}
+      propertyPath: cubeColor
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6065561719073189681, guid: 124cdb2574c29b5438136dfd9833b24e, type: 3}
       propertyPath: m_Name
       value: Green Cube
@@ -2359,9 +2410,25 @@ PrefabInstance:
       propertyPath: color
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1034360125917439371, guid: 113f7d758c585b84cbfbbd477df20dff, type: 3}
+      propertyPath: pedestalColor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2771210008679531434, guid: 113f7d758c585b84cbfbbd477df20dff, type: 3}
       propertyPath: m_Name
       value: Left Pedestal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008841935441139856, guid: 113f7d758c585b84cbfbbd477df20dff, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008841935441139856, guid: 113f7d758c585b84cbfbbd477df20dff, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008841935441139856, guid: 113f7d758c585b84cbfbbd477df20dff, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2500,6 +2567,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3702461926772687387, guid: 124cdb2574c29b5438136dfd9833b24e, type: 3}
       propertyPath: color
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702461926772687387, guid: 124cdb2574c29b5438136dfd9833b24e, type: 3}
+      propertyPath: cubeColor
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6065561719073189681, guid: 124cdb2574c29b5438136dfd9833b24e, type: 3}

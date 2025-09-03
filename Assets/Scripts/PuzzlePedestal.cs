@@ -34,4 +34,14 @@ public class PuzzlePedestal : MonoBehaviour
             }
         }
     }
+
+    public void CubeRemoved()
+    {
+        var interactable = socketInteractor.firstInteractableSelected;
+        
+        if (interactable.transform.gameObject.TryGetComponent<PuzzleCube>(out var cube))
+        {
+            cube.IsCorrectColor = false;
+        }
+    }
 }
