@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.yourcompany.vrprototype"
+          android:installLocation="preferExternal">
+
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"
+        android:anyDensity="true" />
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/app_icon">
+
+        <!-- Fix Oculus supportedDevices merge conflict -->
+        <meta-data
+            android:name="com.oculus.supportedDevices"
+            android:value="quest|quest2|cambria|eureka|quest3s"
+            tools:replace="android:value" />
+
+        <!-- Unity main activity -->
+        <activity android:name="com.unity3d.player.UnityPlayerActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="landscape"
+                  android:launchMode="singleTask"
+                  android:configChanges="locale|fontScale|keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+                  android:hardwareAccelerated="true"
+                  android:resizeableActivity="false"
+                  android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="com.oculus.intent.category.VR" />
+            </intent-filter>
+
+        </activity>
+
+    </application>
+</manifest>
